@@ -2,40 +2,21 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  cursor: none;
-}
-
-html {
-  scroll-behavior: smooth;
 }
 
 body {
   background: #000;
   color: #eaeaea;
   font-family: 'Montserrat', sans-serif;
-  overflow-x: hidden;
 }
 
-/* GOLD ACCENT */
-:root {
-  --gold: #c6a85b;
-}
-
-/* STABLE BACKGROUND IMAGE SECTIONS */
-.parallax {
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: center;
-}
-
-/* NAV */
 nav {
   position: fixed;
   width: 100%;
   padding: 25px 10%;
   display: flex;
   justify-content: space-between;
-  background: rgba(0,0,0,0.85);
+  background: rgba(0,0,0,0.9);
   z-index: 1000;
 }
 
@@ -43,8 +24,8 @@ nav a {
   color: #eaeaea;
   text-decoration: none;
   margin-left: 30px;
+  font-size: 13px;
   letter-spacing: 2px;
-  font-size: 12px;
   position: relative;
 }
 
@@ -55,7 +36,7 @@ nav a::after {
   bottom: -5px;
   width: 0;
   height: 1px;
-  background: var(--gold);
+  background: #c6a85b;
   transition: 0.4s;
 }
 
@@ -63,54 +44,51 @@ nav a:hover::after {
   width: 100%;
 }
 
-/* HERO */
 .hero {
   height: 100vh;
-  background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
-              url("photo1.jpg") center/cover no-repeat fixed;
+  background: url("photo1.jpg") center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
 }
 
-.hero h1 {
+.hero-content h1 {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 5rem;
-  letter-spacing: 6px;
+  font-size: 4rem;
+  letter-spacing: 5px;
 }
 
-.hero p {
-  color: #bfbfbf;
-  margin: 20px 0 40px;
+.hero-content p {
+  margin: 20px 0;
+  color: #bbb;
 }
 
-.gold-btn {
-  border: 1px solid var(--gold);
+.btn {
+  border: 1px solid #c6a85b;
   padding: 12px 35px;
-  color: var(--gold);
+  color: #c6a85b;
   text-decoration: none;
-  letter-spacing: 3px;
-  transition: 0.4s;
+  letter-spacing: 2px;
 }
 
-.gold-btn:hover {
-  background: var(--gold);
-  color: #000;
-}
-
-/* SECTIONS */
 section {
-  padding: 160px 10%;
+  padding: 120px 10%;
 }
 
-/* FEATURED FULLSCREEN IMAGE */
 .featured {
-  height: 100vh;
-  background: url("photo2.jpg") center/cover no-repeat fixed;
+  height: 80vh;
+  background: url("photo2.jpg") center/cover no-repeat;
 }
 
-/* PORTFOLIO ASYMMETRICAL */
+.portfolio h2,
+.pricing h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 80px;
+}
+
 .editorial-grid {
   display: grid;
   grid-template-columns: 1fr 1.5fr 1fr;
@@ -122,58 +100,53 @@ section {
   object-fit: cover;
 }
 
-.small {
-  height: 300px;
-}
+.small { height: 250px; }
+.medium { height: 400px; }
+.large { height: 650px; }
 
-.medium {
-  height: 450px;
-}
-
-.large {
-  height: 700px;
-}
-
-/* PRICING */
-.pricing {
-  text-align: center;
-}
-
-.package-container {
+.packages {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
   gap: 40px;
-  margin-top: 60px;
 }
 
 .package {
   border: 1px solid #222;
-  padding: 50px 30px;
-  transition: 0.4s;
-}
-
-.package:hover {
-  border-color: var(--gold);
+  padding: 40px;
+  text-align: center;
 }
 
 .package h3 {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 2rem;
-  margin-bottom: 20px;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
 }
 
 .price {
-  font-size: 1.5rem;
-  color: var(--gold);
+  color: #c6a85b;
+  font-size: 1.4rem;
   margin-bottom: 20px;
 }
 
 .package ul {
   list-style: none;
-  color: #bfbfbf;
   line-height: 2;
+  color: #bbb;
 }
 
-/* CUSTOM CURSOR */
-.cursor {
-  width: 1
+.wedding {
+  text-align: center;
+  margin-top: 100px;
+}
+
+.wedding span {
+  color: #c6a85b;
+  font-size: 1.3rem;
+}
+
+footer {
+  text-align: center;
+  padding: 40px;
+  background: #111;
+  color: #777;
+}
