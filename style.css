@@ -10,12 +10,12 @@ body {
   color: #2b211b;
 }
 
-/* MENU */
+/* MENU (clean + minimal) */
 .menu {
   position: fixed;
-  top: 25px;
-  right: 30px;
-  background: rgba(255,255,255,0.8);
+  top: 30px;
+  right: 40px;
+  background: rgba(255,255,255,0.85);
   padding: 10px 15px;
   border-radius: 30px;
   backdrop-filter: blur(8px);
@@ -29,92 +29,111 @@ body {
   font-size: 0.9rem;
 }
 
-/* LANDING */
-.landing {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+/* HOME HERO (much closer to Melourra style) */
+.home-hero {
+  min-height: 100vh;
+  padding: 120px 40px 80px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  max-width: 1100px;
+  margin: 0 auto;
   align-items: center;
-  overflow: hidden;
 }
 
-.landing-text {
-  text-align: center;
-  margin-bottom: 40px;
-}
-
-.landing-text h1 {
+.hero-content h1 {
   font-size: 3rem;
   letter-spacing: 1px;
 }
 
-/* HERO SLIDER */
-.hero-slider {
+.hero-image img {
   width: 100%;
-  overflow: hidden;
-  white-space: nowrap;
-}
-
-.slide-track {
-  display: inline-block;
-  animation: slide 25s linear infinite;
-}
-
-.slide-track img {
-  height: 360px;
-  margin: 0 12px;
   border-radius: 18px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.12);
 }
 
-/* Slider animation */
-@keyframes slide {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
+/* FEATURED WORK */
+.featured-work {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 80px 40px;
 }
 
-/* PORTFOLIO PAGE */
+.section-title {
+  margin-bottom: 50px;
+  font-size: 2rem;
+}
+
+/* Featured grid */
+.featured-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.featured-item img {
+  width: 100%;
+  border-radius: 16px;
+}
+
+/* View portfolio link */
+.view-portfolio {
+  margin-top: 40px;
+}
+
+.view-portfolio a {
+  text-decoration: none;
+  color: #2b211b;
+  font-weight: 500;
+}
+
+/* PORTFOLIO PAGE (editorial grid) */
 .portfolio-page {
-  padding: 120px 30px;
+  padding: 120px 40px;
   max-width: 1100px;
   margin: 0 auto;
 }
 
-.section-title {
-  margin-bottom: 60px;
-  font-size: 2.2rem;
+/* Custom portfolio grid */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
 }
 
-/* Masonry-style portfolio (like your reference) */
-.masonry {
-  column-count: 2;
-  column-gap: 30px;
+/* Different sizes like Melourra */
+.p-item.big {
+  grid-column: span 2;
 }
 
-.masonry-item {
-  margin-bottom: 30px;
-  break-inside: avoid;
+.p-item.medium {
+  grid-column: span 1;
+}
+
+.p-item.small {
+  grid-column: span 1;
+}
+
+.p-item img {
+  width: 100%;
+  border-radius: 16px;
+}
+
+/* FADE + REVEAL ANIMATIONS (like high-end sites) */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1.2s ease forwards;
+}
+
+.reveal {
   opacity: 0;
   transform: translateY(40px);
   transition: all 1s ease;
 }
 
-.masonry-item img {
-  width: 100%;
-  border-radius: 16px;
-}
-
-/* When revealed */
-.masonry-item.visible {
+.reveal.visible {
   opacity: 1;
   transform: translateY(0);
-}
-
-/* FADE-IN TEXT */
-.fade-in {
-  opacity: 0;
-  animation: fadeIn 1.2s ease forwards;
 }
 
 @keyframes fadeIn {
