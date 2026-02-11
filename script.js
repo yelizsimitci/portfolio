@@ -1,17 +1,11 @@
-// Optional: fade-in effect as user scrolls
-const photos = document.querySelectorAll('.photo');
+const photos = document.querySelectorAll('.photo-wrapper');
 
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
-    if(entry.isIntersecting) {
-      entry.target.style.opacity = 1;
-      entry.target.style.transform = 'translateY(0)';
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
     }
   });
-}, { threshold: 0.3 });
+}, { threshold: 0.2 });
 
-photos.forEach(photo => {
-  photo.style.opacity = 0;
-  photo.style.transform = 'translateY(50px)';
-  observer.observe(photo);
-});
+photos.forEach(photo => observer.observe(photo));
