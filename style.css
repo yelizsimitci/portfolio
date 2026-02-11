@@ -1,0 +1,59 @@
+/* Reset & basic styles */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Helvetica Neue', sans-serif; background: #fff8f0; color: #333; line-height: 1.6; }
+
+a { color: #c27c6f; text-decoration: none; }
+
+/* Hero */
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: #ffeedd;
+  color: #4a3b31;
+}
+.hero h1 { font-size: 3em; margin-bottom: 0.5em; }
+.hero p { font-size: 1.5em; }
+
+/* Portfolio */
+.portfolio {
+  display: flex;
+  flex-direction: column;
+}
+.photo {
+  height: 70vh;
+  margin: 2rem auto;
+  max-width: 90%;
+  background-size: cover;
+  background-position: center;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  transition: transform 0.5s, box-shadow 0.5s;
+}
+.photo:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+}
+
+/* About & Contact Sections */
+section { padding: 5rem 2rem; text-align: center; }
+.about h2, .contact h2 { font-size: 2em; margin-bottom: 1em; }
+.contact form { display: flex; flex-direction: column; max-width: 400px; margin: 0 auto; }
+.contact input, .contact textarea {
+  padding: 1em; margin-bottom: 1em; border: 1px solid #ccc; border-radius: 10px;
+}
+.contact button {
+  padding: 1em;
+  background: #c27c6f;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.contact button:hover { background: #a95e58; }
+
+/* Footer */
+footer { padding: 2rem; text-align: center; font-size: 0.9em; color: #555; }
