@@ -2,47 +2,48 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <title>Yeliz Simitci | Photographer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Yeliz Simitci Photography</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
 
-  <!-- Header / Hero Section -->
-  <header class="hero">
-    <h1>Yeliz Simitci Photography</h1>
-    <p>Warm & Dreamy Portraits</p>
-  </header>
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
-  <!-- Portfolio Section -->
-  <section class="portfolio">
-    <div class="photo" style="background-image: url('photos/photo1.jpg')"></div>
-    <div class="photo" style="background-image: url('photos/photo2.jpg')"></div>
-    <div class="photo" style="background-image: url('photos/photo3.jpg')"></div>
-    <div class="photo" style="background-image: url('photos/photo4.jpg')"></div>
-  </section>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-  <!-- About Me -->
-  <section class="about">
-    <h2>About Me</h2>
-    <p>Hi! I’m Yeliz. I capture warm, dreamy portraits that tell your story.</p>
-  </section>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f9f7f5;
+      color: #333;
+      line-height: 1.6;
+    }
 
-  <!-- Contact -->
-  <section class="contact">
-    <h2>Contact Me</h2>
-    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <textarea name="message" placeholder="Message" required></textarea>
-      <button type="submit">Send</button>
-    </form>
-  </section>
+    h1, h2, h3 {
+      font-family: 'Playfair Display', serif;
+    }
 
-  <footer>
-    <p>Follow me: <a href="#">Instagram</a> | <a href="#">Email</a></p>
-  </footer>
+    section {
+      padding: 80px 10%;
+    }
 
-  <script src="script.js"></script>
-</body>
-</html>
+    /* HERO */
+    .hero {
+      height: 90vh;
+      background: url('https://images.unsplash.com/photo-1492724441997-5dc865305da7') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      position: relative;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.4)
