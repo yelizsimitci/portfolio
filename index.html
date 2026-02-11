@@ -5,68 +5,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Yeliz Simitci Photography</title>
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <!-- Landing Page -->
-  <section id="landing">
-    <video autoplay muted loop id="bg-video">
-      <source src="videos/landing.mp4" type="video/mp4">
-    </video>
-    <div class="landing-text">
-      <h1>Welcome to My Portfolio</h1>
-      <a href="#portfolio" class="view-button">View &rarr;</a>
-    </div>
+  <!-- Header / Hero Section -->
+  <header class="hero">
+    <h1>Yeliz Simitci Photography</h1>
+    <p>Warm & Dreamy Portraits</p>
+  </header>
+
+  <!-- Portfolio Section -->
+  <section class="portfolio">
+    <div class="photo" style="background-image: url('photos/photo1.jpg')"></div>
+    <div class="photo" style="background-image: url('photos/photo2.jpg')"></div>
+    <div class="photo" style="background-image: url('photos/photo3.jpg')"></div>
+    <div class="photo" style="background-image: url('photos/photo4.jpg')"></div>
   </section>
 
-  <!-- Portfolio Page -->
-  <section id="portfolio">
-    <div class="photo-grid">
-      <div class="photo" style="background-image: url('photo1.jpg')"></div>
-      <div class="photo" style="background-image: url('photo2.jpg')"></div>
-      <div class="photo" style="background-image: url('photo3.jpg')"></div>
-      <div class="photo" style="background-image: url('photo4.jpg')"></div>
-      <div class="photo" style="background-image: url('photo5.jpg')"></div>
-    </div>
+  <!-- About Me -->
+  <section class="about">
+    <h2>About Me</h2>
+    <p>Hi! I’m Yeliz. I capture warm, dreamy portraits that tell your story.</p>
   </section>
 
-  <!-- Pricing Page -->
-  <section id="pricing">
-    <h2>My Packages</h2>
-    <div class="pricing-grid">
-      <div class="package">
-        <h3>Basic</h3>
-        <p>$300 / hour</p>
-        <p>1-hour session, 1 outfit, all usable high-res photos, light retouching.</p>
-      </div>
-      <div class="package">
-        <h3>Standard</h3>
-        <p>$500 / 2 hours</p>
-        <p>2-hour session, 2 outfits, 2 locations, priority gallery delivery.</p>
-      </div>
-      <div class="package">
-        <h3>Premium</h3>
-        <p>$800 / 3 hours</p>
-        <p>3-hour session, multiple outfits & locations, full retouching, fast delivery.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact Page -->
-  <section id="contact">
-    <h2>Book a Session</h2>
+  <!-- Contact -->
+  <section class="contact">
+    <h2>Contact Me</h2>
     <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
       <input type="text" name="name" placeholder="Your Name" required>
       <input type="email" name="email" placeholder="Your Email" required>
-      <label>What kind of photoshoot service?</label>
-      <input type="text" name="service" placeholder="e.g., Senior, Portrait">
-      <label>When?</label>
-      <input type="date" name="date">
-      <label>What style do you like?</label>
-      <input type="text" name="style" placeholder="e.g., dreamy, vintage">
-      <label>Any other details?</label>
-      <textarea name="details" placeholder="Write anything else here..."></textarea>
+      <textarea name="message" placeholder="Message" required></textarea>
       <button type="submit">Send</button>
     </form>
   </section>
