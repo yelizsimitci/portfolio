@@ -5,46 +5,52 @@
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: "Helvetica Neue", Arial, sans-serif;
   background: #fff7ef;
-  color: #3a2f28;
+  color: #2b211b;
 }
 
 /* MENU */
 .menu {
   position: fixed;
-  top: 20px;
-  right: 20px;
+  top: 25px;
+  right: 30px;
   background: rgba(255,255,255,0.8);
   padding: 10px 15px;
-  border-radius: 20px;
-  backdrop-filter: blur(10px);
+  border-radius: 30px;
+  backdrop-filter: blur(8px);
+  z-index: 100;
 }
 
 .menu a {
-  margin-left: 10px;
+  margin-left: 12px;
   text-decoration: none;
-  color: #3a2f28;
+  color: #2b211b;
   font-size: 0.9rem;
 }
 
-/* LANDING PAGE */
+/* LANDING */
 .landing {
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
   overflow: hidden;
 }
 
 .landing-text {
+  text-align: center;
   margin-bottom: 40px;
 }
 
-/* SLIDER */
-.slider {
+.landing-text h1 {
+  font-size: 3rem;
+  letter-spacing: 1px;
+}
+
+/* HERO SLIDER */
+.hero-slider {
   width: 100%;
   overflow: hidden;
   white-space: nowrap;
@@ -52,17 +58,17 @@ body {
 
 .slide-track {
   display: inline-block;
-  animation: slide 20s linear infinite;
+  animation: slide 25s linear infinite;
 }
 
 .slide-track img {
-  height: 350px;
-  margin: 0 10px;
-  border-radius: 15px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  height: 360px;
+  margin: 0 12px;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
 }
 
-/* Slide animation */
+/* Slider animation */
 @keyframes slide {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
@@ -70,52 +76,55 @@ body {
 
 /* PORTFOLIO PAGE */
 .portfolio-page {
-  padding: 100px 20px;
-  max-width: 1000px;
+  padding: 120px 30px;
+  max-width: 1100px;
   margin: 0 auto;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 20px;
+.section-title {
+  margin-bottom: 60px;
+  font-size: 2.2rem;
 }
 
-.grid img {
+/* Masonry-style portfolio (like your reference) */
+.masonry {
+  column-count: 2;
+  column-gap: 30px;
+}
+
+.masonry-item {
+  margin-bottom: 30px;
+  break-inside: avoid;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 1s ease;
+}
+
+.masonry-item img {
   width: 100%;
-  border-radius: 15px;
+  border-radius: 16px;
 }
 
-/* PRICING */
-.pricing {
-  padding: 100px 20px;
-  text-align: center;
+/* When revealed */
+.masonry-item.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-.packages {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 20px;
-  max-width: 900px;
-  margin: 40px auto;
+/* FADE-IN TEXT */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1.2s ease forwards;
 }
 
-.package {
-  background: white;
-  padding: 20px;
-  border-radius: 15px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-}
-
-/* CONTACT */
-.contact-page {
-  padding: 100px 20px;
-  text-align: center;
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 /* FOOTER */
 footer {
   text-align: center;
-  padding: 30px;
+  padding: 40px;
   opacity: 0.7;
 }
