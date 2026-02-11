@@ -1,42 +1,19 @@
-// Fade-in on scroll
+// CUSTOM CURSOR
+const cursor = document.createElement("div");
+cursor.classList.add("cursor");
+document.body.appendChild(cursor);
 
-const faders = document.querySelectorAll('.fade-in');
-
-const appearOptions = {
-  threshold: 0.2
-};
-
-const appearOnScroll = new IntersectionObserver(function(
-  entries,
-  appearOnScroll
-) {
-  entries.forEach(entry => {
-    if (!entry.isIntersecting) {
-      return;
-    } else {
-      entry.target.classList.add('show');
-      appearOnScroll.unobserve(entry.target);
-    }
-  });
-}, appearOptions);
-
-faders.forEach(fader => {
-  appearOnScroll.observe(fader);
+document.addEventListener("mousemove", e => {
+  cursor.style.left = e.pageX + "px";
+  cursor.style.top = e.pageY + "px";
 });
 
-// Lightbox
-
-const galleryImages = document.querySelectorAll('.gallery-item');
-const lightbox = document.getElementById('lightbox');
-const lightboxImg = document.getElementById('lightbox-img');
-
-galleryImages.forEach(image => {
-  image.addEventListener('click', () => {
-    lightbox.style.display = "flex";
-    lightboxImg.src = image.src;
-  });
-});
-
-lightbox.addEventListener('click', () => {
-  lightbox.style.display = "none";
-});
+// PASSWORD PROTECTED CLIENT GALLERY
+function checkPassword() {
+  const password = prompt("Enter client password:");
+  if (password === "editorial2026") {
+    window.location.href = "client-gallery.html";
+  } else {
+    alert("Incorrect password.");
+  }
+}
