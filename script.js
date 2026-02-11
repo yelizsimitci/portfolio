@@ -1,12 +1,42 @@
-// Reveal elements as you scroll (editorial feel)
-const reveals = document.querySelectorAll('.reveal');
+// Fade-in on scroll
 
-const observer = new IntersectionObserver(entries => {
+const faders = document.querySelectorAll('.fade-in');
+
+const appearOptions = {
+  threshold: 0.2
+};
+
+const appearOnScroll = new IntersectionObserver(function(
+  entries,
+  appearOnScroll
+) {
   entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
+    if (!entry.isIntersecting) {
+      return;
+    } else {
+      entry.target.classList.add('show');
+      appearOnScroll.unobserve(entry.target);
     }
   });
-}, { threshold: 0.2 });
+}, appearOptions);
 
-reveals.forEach(el => observer.observe(el));
+faders.forEach(fader => {
+  appearOnScroll.observe(fader);
+});
+
+// Lightbox
+
+const galleryImages = document.querySelectorAll('.gallery-item');
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightbox-img');
+
+galleryImages.forEach(image => {
+  image.addEventListener('click', () => {
+    lightbox.style.display = "flex";
+    lightboxImg.src = image.src;
+  });
+});
+
+lightbox.addEventListener('click', () => {
+  lightbox.style.display = "none";
+});
