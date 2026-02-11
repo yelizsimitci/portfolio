@@ -10,72 +10,112 @@ body {
   color: #3a2f28;
 }
 
-/* HERO SECTION */
-.hero {
+/* MENU */
+.menu {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: rgba(255,255,255,0.8);
+  padding: 10px 15px;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+}
+
+.menu a {
+  margin-left: 10px;
+  text-decoration: none;
+  color: #3a2f28;
+  font-size: 0.9rem;
+}
+
+/* LANDING PAGE */
+.landing {
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  background: linear-gradient(to bottom, #ffeedd, #fff7ef);
+  overflow: hidden;
 }
 
-.hero h1 {
-  font-size: 3rem;
-  letter-spacing: 1px;
+.landing-text {
+  margin-bottom: 40px;
 }
 
-.hero p {
-  margin-top: 10px;
-  opacity: 0.7;
-}
-
-.scroll-hint {
-  margin-top: 20px;
-  font-size: 0.9rem;
-  opacity: 0.5;
-}
-
-/* PORTFOLIO */
-.portfolio {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 60px 20px;
-}
-
-/* Each photo container */
-.photo-wrapper {
-  margin-bottom: 80px;
-  opacity: 0;
-  transform: translateY(60px);
-  transition: opacity 1s ease, transform 1s ease;
-}
-
-/* When visible */
-.photo-wrapper.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Images */
-.photo-wrapper img {
+/* SLIDER */
+.slider {
   width: 100%;
-  border-radius: 18px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-  display: block;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
-/* Alternate left/right feel */
-.photo-wrapper:nth-child(even) img {
-  margin-left: auto;
-  width: 90%;
+.slide-track {
+  display: inline-block;
+  animation: slide 20s linear infinite;
+}
+
+.slide-track img {
+  height: 350px;
+  margin: 0 10px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* Slide animation */
+@keyframes slide {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* PORTFOLIO PAGE */
+.portfolio-page {
+  padding: 100px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.grid img {
+  width: 100%;
+  border-radius: 15px;
+}
+
+/* PRICING */
+.pricing {
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.packages {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  max-width: 900px;
+  margin: 40px auto;
+}
+
+.package {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* CONTACT */
+.contact-page {
+  padding: 100px 20px;
+  text-align: center;
 }
 
 /* FOOTER */
 footer {
   text-align: center;
-  padding: 40px;
-  font-size: 0.9rem;
+  padding: 30px;
   opacity: 0.7;
 }
