@@ -1,49 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Yeliz Simitci | Photographer</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yeliz Simitci | Editorial Portrait Photographer</title>
 
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+<body>
 
-    body {
-      font-family: 'Inter', sans-serif;
-      background-color: #f9f7f5;
-      color: #333;
-      line-height: 1.6;
-    }
+<nav>
+  <div class="logo">Yeliz Simitci</div>
+  <div class="nav-links">
+    <a href="#about">About</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#contact">Inquire</a>
+  </div>
+</nav>
 
-    h1, h2, h3 {
-      font-family: 'Playfair Display', serif;
-    }
+<section class="hero">
+  <div class="hero-content fade-in">
+    <h1>YELIZ SIMITCI</h1>
+    <p>Warm Editorial Portraiture</p>
+    <a href="#portfolio" class="hero-btn">View Work</a>
+  </div>
+</section>
 
-    section {
-      padding: 80px 10%;
-    }
+<section id="about" class="about fade-in">
+  <h2>About</h2>
+  <p>
+    I create refined, intimate portraiture inspired by warmth, movement,
+    and honest emotion. My work blends editorial elegance with natural storytelling,
+    resulting in timeless imagery that feels both elevated and personal.
+  </p>
+</section>
 
-    /* HERO */
-    .hero {
-      height: 90vh;
-      background: url('https://images.unsplash.com/photo-1492724441997-5dc865305da7') center/cover no-repeat;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      color: white;
-      position: relative;
-    }
+<section id="portfolio" class="portfolio">
+  <h2 class="fade-in">Selected Work</h2>
+  <div class="gallery">
+    <img src="photo1.jpg" class="gallery-item fade-in">
+    <img src="photo2.jpg" class="gallery-item fade-in">
+    <img src="photo3.jpg" class="gallery-item fade-in">
+    <img src="photo4.jpg" class="gallery-item fade-in">
+  </div>
+</section>
 
-    .hero::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.4)
+<section id="contact" class="contact fade-in">
+  <h2>Inquiries</h2>
+  <form>
+    <input type="text" placeholder="Name" required>
+    <input type="email" placeholder="Email" required>
+    <textarea placeholder="Tell me about your vision..." required></textarea>
+    <button type="submit">Send Inquiry</button>
+  </form>
+</section>
+
+<footer>
+  © 2026 Yeliz Simitci — All Rights Reserved
+</footer>
+
+<!-- Lightbox -->
+<div id="lightbox">
+  <img id="lightbox-img">
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
