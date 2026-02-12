@@ -1,104 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Yeliz Simitci | New York Editorial Studio</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Yeliz Simitci Photography</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<nav>
-  <div class="logo">YELIZ SIMITCI</div>
-  <div class="nav-links">
-    <a href="#">Home</a>
-    <a href="#">Portfolio</a>
-    <a href="#">Pricing</a>
-    <a href="#">Contact</a>
-  </div>
-</nav>
+<header class="hero">
+  <h1>Yeliz Simitci</h1>
+  <p>Luxury Portrait & Editorial Photography</p>
+  <a href="#portfolio" class="btn">View Portfolio</a>
+</header>
 
-<section class="hero">
-  <div class="hero-content">
-    <h1>NEW YORK EDITORIAL</h1>
-    <p>Portrait Studio</p>
-    <a href="#" class="btn">VIEW PORTFOLIO</a>
-  </div>
-</section>
-
-<section class="featured">
-</section>
-
-<section class="portfolio">
-  <h2>Selected Work</h2>
+<section id="portfolio">
+  <h2>Portfolio</h2>
 
   <div class="editorial-grid">
-    <img src="photo1.jpg" class="medium">
-    <img src="photo2.jpg" class="large">
-    <img src="photo3.jpg" class="small">
-    <img src="photo4.jpg" class="medium">
-    <img src="photo1.jpg" class="small">
-    <img src="photo2.jpg" class="medium">
+    <img src="photo1.jpg">
+    <img src="photo2.jpg">
+    <img src="photo3.jpg">
+    <img src="photo4.jpg">
+  </div>
+
+  <div style="text-align:center; margin-top:80px;">
+    <button onclick="enterClientGallery()" class="btn">
+      Client Gallery
+    </button>
   </div>
 </section>
 
-<section class="pricing">
-  <h2>Investment</h2>
-
-  <div class="packages">
-    <div class="package">
-      <h3>Essential</h3>
-      <p class="price">$350</p>
-      <ul>
-        <li>45 Min Session</li>
-        <li>1 Location</li>
-        <li>10 Edited Images</li>
-      </ul>
-    </div>
-
-    <div class="package">
-      <h3>Signature</h3>
-      <p class="price">$500</p>
-      <ul>
-        <li>90 Min Session</li>
-        <li>2 Locations</li>
-        <li>20 Edited Images</li>
-      </ul>
-    </div>
-
-    <div class="package">
-      <h3>Editorial Luxe</h3>
-      <p class="price">$650</p>
-      <ul>
-        <li>2 Hour Session</li>
-        <li>Multiple Looks</li>
-        <li>35 Edited Images</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="wedding">
-    <h3>Weddings</h3>
-    <p>Collections starting from <span>$2800</span></p>
-  </div>
-
-</section>
-
-<footer>
-  © 2026 Yeliz Simitci — All Rights Reserved
-</footer>
-
-<script src="script.js"></script>
-
-  <div id="lightbox">
+<div id="lightbox">
   <img id="lightbox-img">
 </div>
 
 <div class="grain"></div>
 
+<script src="script.js"></script>
 
 </body>
 </html>
