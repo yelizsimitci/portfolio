@@ -1,40 +1,192 @@
-// PAGE FADE IN
-window.addEventListener("load", () => {
-  document.body.classList.add("loaded");
-});
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-// CUSTOM CURSOR
-const cursor = document.createElement("div");
-cursor.classList.add("cursor");
-document.body.appendChild(cursor);
+html {
+  scroll-behavior: smooth;
+}
 
-document.addEventListener("mousemove", (e) => {
-  cursor.style.left = e.clientX + "px";
-  cursor.style.top = e.clientY + "px";
-});
+body {
+  background: #0c0c0c;
+  color: #f2f2f2;
+  font-family: 'Inter', sans-serif;
+}
 
-// LIGHTBOX
-const images = document.querySelectorAll(".editorial-grid img");
-const lightbox = document.getElementById("lightbox");
-const lightboxImg = document.getElementById("lightbox-img");
+/* NAV */
+nav {
+  position: fixed;
+  width: 100%;
+  padding: 25px 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: transparent;
+  z-index: 1000;
+}
 
-images.forEach(img => {
-  img.addEventListener("click", () => {
-    lightbox.style.display = "flex";
-    lightboxImg.src = img.src;
-  });
-});
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+}
 
-lightbox.addEventListener("click", () => {
-  lightbox.style.display = "none";
-});
+.nav-links a {
+  margin-left: 30px;
+  text-decoration: none;
+  color: #aaa;
+  font-size: 14px;
+  transition: 0.3s;
+}
 
-// PASSWORD PROTECTED CLIENT PAGE
-function enterClientGallery() {
-  const password = prompt("Enter client password:");
-  if (password === "NY2026") {
-    window.location.href = "client-gallery.html";
-  } else {
-    alert("Incorrect password.");
-  }
+.nav-links a:hover {
+  color: #fff;
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 8%;
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 64px;
+  font-weight: 400;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 14px;
+  letter-spacing: 3px;
+  color: #888;
+}
+
+/* WORK */
+.work img {
+  width: 100%;
+  display: block;
+  margin: 0;
+}
+
+/* ABOUT */
+.about {
+  padding: 120px 8%;
+  max-width: 800px;
+}
+
+.about h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.about p {
+  color: #aaa;
+  line-height: 1.7;
+}
+
+/* PRICING */
+.pricing {
+  padding: 120px 8%;
+}
+
+.pricing h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 40px;
+  margin-bottom: 60px;
+}
+
+.packages {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.card {
+  border: 1px solid #222;
+  padding: 40px;
+  flex: 1;
+  min-width: 250px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  border-color: #555;
+}
+
+.card h3 {
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.card ul {
+  list-style: none;
+  color: #aaa;
+}
+
+.card ul li {
+  margin-bottom: 10px;
+}
+
+.featured {
+  border-color: #888;
+}
+
+.wedding {
+  margin-top: 40px;
+  color: #888;
+}
+
+/* CONTACT */
+.contact {
+  padding: 120px 8%;
+  max-width: 600px;
+}
+
+.contact h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 40px;
+  margin-bottom: 40px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input, textarea {
+  background: transparent;
+  border: 1px solid #222;
+  padding: 15px;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+button {
+  padding: 15px;
+  background: #fff;
+  color: #000;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #ccc;
+}
+
+footer {
+  padding: 60px 8%;
+  color: #666;
+  font-size: 14px;
 }
