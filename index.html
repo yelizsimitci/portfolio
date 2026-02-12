@@ -1,42 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Yeliz Simitci Photography</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yeliz Simitci</title>
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-<header class="hero">
-  <h1>Yeliz Simitci</h1>
-  <p>Luxury Portrait & Editorial Photography</p>
-  <a href="#portfolio" class="btn">View Portfolio</a>
-</header>
-
-<section id="portfolio">
-  <h2>Portfolio</h2>
-
-  <div class="editorial-grid">
-    <img src="photo1.jpg">
-    <img src="photo2.jpg">
-    <img src="photo3.jpg">
-    <img src="photo4.jpg">
+<nav>
+  <div class="logo">Yeliz Simitci</div>
+  <div class="nav-links">
+    <a href="#work">Work</a>
+    <a href="#about">About</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#contact">Contact</a>
   </div>
+</nav>
 
-  <div style="text-align:center; margin-top:80px;">
-    <button onclick="enterClientGallery()" class="btn">
-      Client Gallery
-    </button>
-  </div>
+<section class="hero">
+  <h1>Luxury Portrait<br> & Editorial Photography</h1>
+  <p>New York</p>
 </section>
 
-<div id="lightbox">
-  <img id="lightbox-img">
-</div>
+<section id="work" class="work">
+  <img src="photo1.jpg">
+  <img src="photo2.jpg">
+  <img src="photo3.jpg">
+  <img src="photo4.jpg">
+</section>
 
-<div class="grain"></div>
+<section id="about" class="about">
+  <h2>About</h2>
+  <p>
+    I create timeless, editorial imagery inspired by modern fashion and classic cinema.
+    My work blends intimacy, softness, and refined elegance.
+  </p>
+</section>
+
+<section id="pricing" class="pricing">
+  <h2>Packages</h2>
+
+  <div class="packages">
+    <div class="card">
+      <h3>Essential</h3>
+      <p>$350</p>
+      <ul>
+        <li>1 Hour Session</li>
+        <li>10 Edited Images</li>
+        <li>Online Gallery</li>
+      </ul>
+    </div>
+
+    <div class="card featured">
+      <h3>Signature</h3>
+      <p>$500</p>
+      <ul>
+        <li>2 Hour Session</li>
+        <li>20 Edited Images</li>
+        <li>Styling Guidance</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>Premium</h3>
+      <p>$650</p>
+      <ul>
+        <li>3 Hour Session</li>
+        <li>35 Edited Images</li>
+        <li>Priority Delivery</li>
+      </ul>
+    </div>
+  </div>
+
+  <p class="wedding">Weddings starting at $2800</p>
+</section>
+
+<section id="contact" class="contact">
+  <h2>Contact</h2>
+  <form action="https://formspree.io/f/yourID" method="POST">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" placeholder="Tell me about your vision"></textarea>
+    <button type="submit">Send Inquiry</button>
+  </form>
+</section>
+
+<footer>
+  © 2026 Yeliz Simitci — New York
+</footer>
 
 <script src="script.js"></script>
-
 </body>
 </html>
