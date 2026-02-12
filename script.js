@@ -1,19 +1,9 @@
-// CUSTOM CURSOR
-const cursor = document.createElement("div");
-cursor.classList.add("cursor");
-document.body.appendChild(cursor);
-
-document.addEventListener("mousemove", e => {
-  cursor.style.left = e.pageX + "px";
-  cursor.style.top = e.pageY + "px";
-});
-
-// PASSWORD PROTECTED CLIENT GALLERY
-function checkPassword() {
-  const password = prompt("Enter client password:");
-  if (password === "editorial2026") {
-    window.location.href = "client-gallery.html";
+// Smooth fade on scroll
+window.addEventListener("scroll", () => {
+  const nav = document.querySelector("nav");
+  if (window.scrollY > 50) {
+    nav.style.background = "rgba(0,0,0,0.8)";
   } else {
-    alert("Incorrect password.");
+    nav.style.background = "transparent";
   }
-}
+});
